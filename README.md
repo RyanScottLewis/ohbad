@@ -9,6 +9,16 @@
 Funny name, great results.
 Conversion made easy.
 
+# Install
+
+No gem yet...
+
+    git clone git://github.com/c00lryguy/ohbad.git
+    cd ohbad
+    rake test
+
+# [Docs](http://rubydoc.info/github/c00lryguy/ohbad)
+
 # Example
 
 ### Byte
