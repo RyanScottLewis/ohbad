@@ -11,4 +11,4 @@ end
 
 require 'minitest/autorun'
 
-require 'hexadecimal'
+require 'ohbad'
