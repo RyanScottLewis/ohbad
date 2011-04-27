@@ -1,23 +1,20 @@
-# hexadecimal
+# ohbad
 
-An easier way to deal with hexadecimal strings.
+*O*ctal
+*H*exadecimal
+*B*inary
+*A*SCII
+*D*ecimal
+
+Funny name, great results.
+Conversion made easy.
 
 # Example
 
-Byte:
-
-
-Data:
-
-    data = Hexadecimal::Data.from_s("car")
-    p data.to_ascii # => "car"
-    data[0] = 11   # set as dec
-    p data.to_ascii # => "bar"
-    data[0] = "74" # set as hex
-    p data.to_ascii # => "tar"
+### Byte
 
 ## Contributing to meta_tools
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
