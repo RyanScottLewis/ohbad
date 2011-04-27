@@ -1,6 +1,5 @@
 require 'meta_tools'
 
-
 # Octal
 # Hexadecimal
 # Binary
