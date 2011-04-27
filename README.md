@@ -26,6 +26,15 @@ No gem yet...
 
 ### Byte
 
+    require 'ohbad'
+
+    oh_so_very_bad = Ohbad::Byte.from_ascii("a")
+    p oh_so_very_bad.to_hex   # => "61"
+    p oh_so_very_bad.to_dec   # => "97"
+    p oh_so_very_bad.to_oct   # => "141"
+    p oh_so_very_bad.to_bin   # => "01100001"
+    p oh_so_very_bad.to_ascii # => "a"
+
 ## Contributing to meta_tools
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet

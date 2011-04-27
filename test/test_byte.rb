@@ -19,20 +19,3 @@ class TestByte < MiniTest::Unit::TestCase
     end
   end
 end
-
-
-
-# require 'pp'
-
-# p Ohbad.from_hex("61")
-# p Ohbad.from_dec("97")
-# p Ohbad.from_oct("141")
-# p Ohbad.from_bin("01100001")
-# p Ohbad.from_ascii("a")
-# p "============================"
-# oh_so_very_bad = Ohbad.from_ascii("a")
-# p oh_so_very_bad.to_hex
-# p oh_so_very_bad.to_dec
-# p oh_so_very_bad.to_oct
-# p oh_so_very_bad.to_bin
-# p oh_so_very_bad.to_ascii
