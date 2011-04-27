@@ -1,3 +1,5 @@
+gem 'meta_tools'
+
 group :test do
-  gem 'riot'
+  gem 'minitest'
 end

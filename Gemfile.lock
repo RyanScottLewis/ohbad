@@ -1,11 +1,11 @@
 GEM
   specs:
-    riot (0.12.3)
-      rr
-    rr (1.0.2)
+    meta_tools (0.1.0)
+    minitest (2.1.0)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  riot
+  meta_tools
+  minitest

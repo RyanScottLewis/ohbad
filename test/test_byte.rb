@@ -1,42 +1,38 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'helper'
 
-context "A Byte" do
-  setup { Hexadecimal::Byte.new }
+class TestByte < MiniTest::Unit::TestCase
+  def setup; end
 
-  asserts_topic.assigns(:hex) { "00" }
-  asserts("to_hex is zero") { topic.to_hex == "00" }
-  asserts_topic.assigns(:dec) { 0 }
-  asserts("to_dec is zero") { topic.to_dec == 0 }
+  def test_from_hex
+    byte = Ohbad::Byte.from_hex("61")
+    assertion_hash = {
+      :to_hex => "61",
+      :to_dec => "97",
+      :to_oct => "141",
+      :to_bin => "01100001",
+      :to_ascii => "a"
+    }
 
-  context "with a decimal value of 10" do
-    context "set with #replace with an Integer" do
-      hookup { topic.replace(10) }
-
-      asserts("to_hex is A") { topic.to_hex == "0A" }
-      asserts("to_dec is 10") { topic.to_dec == 10 }
-    end
-
-    context "set with #replace with a String" do
-      hookup { topic.replace("A") }
-
-      asserts("to_hex is A") { topic.to_hex == "0A" }
-      asserts("to_dec is 10") { topic.to_dec == 10 }
-    end
-
-    context "set with #dec=" do
-      hookup { topic.dec = 10 }
-
-      asserts("to_hex is A") { topic.to_hex == "0A" }
-      asserts("to_dec is 10") { topic.to_dec == 10 }
-    end
-
-    context "set with #hex=" do
-      hookup { topic.hex = "A" }
-
-      asserts("to_hex is A") { topic.to_hex == "0A" }
-      asserts("to_dec is 10") { topic.to_dec == 10 }
+    assertion_hash.each do |method, result|
+      assert_equal byte.send(method), result
     end
   end
-
 end
+
+
+
+# require 'pp'
+
+# p Ohbad.from_hex("61")
+# p Ohbad.from_dec("97")
+# p Ohbad.from_oct("141")
+# p Ohbad.from_bin("01100001")
+# p Ohbad.from_ascii("a")
+# p "============================"
+# oh_so_very_bad = Ohbad.from_ascii("a")
+# p oh_so_very_bad.to_hex
+# p oh_so_very_bad.to_dec
+# p oh_so_very_bad.to_oct
+# p oh_so_very_bad.to_bin
+# p oh_so_very_bad.to_ascii
