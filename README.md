@@ -1,10 +1,10 @@
 # ohbad
 
-*O*ctal
-*H*exadecimal
-*B*inary
-*A*SCII
-*D*ecimal
+*O*ctal  
+*H*exadecimal  
+*B*inary  
+*A*SCII  
+*D*ecimal  
 
 Funny name, great results.
 Conversion made easy.
