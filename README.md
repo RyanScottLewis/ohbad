@@ -6,7 +6,7 @@
 *A*SCII  
 *D*ecimal  
 
-Funny name, great results.
+Funny name, great results.  
 Conversion made easy.
 
 # Install
@@ -17,7 +17,10 @@ No gem yet...
     cd ohbad
     rake test
 
-# [Docs](http://rubydoc.info/github/c00lryguy/ohbad)
+# Documentation
+
+[Gem]()
+[GitHub](http://rubydoc.info/github/c00lryguy/ohbad)
 
 # Example
 
