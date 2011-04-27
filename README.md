@@ -35,7 +35,7 @@ No gem yet...
     p oh_so_very_bad.to_bin   # => "01100001"
     p oh_so_very_bad.to_ascii # => "a"
 
-## Contributing to meta_tools
+## Contributing to ohbad
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
