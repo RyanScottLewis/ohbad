@@ -10,7 +10,7 @@ class TestByte < MiniTest::Unit::TestCase
     end
   end
 
-  def test_from_oct_to_all
+  def test_from_oct
     byte = Ohbad::Byte.from_oct("141")
     assert_the_byte(byte, 
       :to_oct   => "141",
@@ -21,7 +21,7 @@ class TestByte < MiniTest::Unit::TestCase
     )
   end
 
-  def test_from_hex_to_all
+  def test_from_hex
     byte = Ohbad::Byte.from_hex("62")
     assert_the_byte(byte, 
       :to_oct   => "142",
@@ -32,7 +32,7 @@ class TestByte < MiniTest::Unit::TestCase
     )
   end
 
-  def test_from_bin_to_all
+  def test_from_bin
     byte = Ohbad::Byte.from_bin("1100011")
     assert_the_byte(byte, 
       :to_oct   => "143",
@@ -43,7 +43,7 @@ class TestByte < MiniTest::Unit::TestCase
     )
   end
   
-  def test_from_ascii_to_all
+  def test_from_ascii
     byte = Ohbad::Byte.from_ascii("d")
     assert_the_byte(byte, 
       :to_oct   => "144",
@@ -54,7 +54,7 @@ class TestByte < MiniTest::Unit::TestCase
     )
   end
   
-  def test_from_dec_to_all
+  def test_from_dec
     byte = Ohbad::Byte.from_dec("101")
     assert_the_byte(byte, 
       :to_oct   => "145",
@@ -62,6 +62,28 @@ class TestByte < MiniTest::Unit::TestCase
       :to_ascii => "e",
       :to_bin   => "01100101",
       :to_dec   => "101"
+    )
+  end
+
+  def test_from_dec_integer
+    byte = Ohbad::Byte.from_dec(102)
+    assert_the_byte(byte, 
+      :to_oct   => "146",
+      :to_hex   => "66",
+      :to_ascii => "f",
+      :to_bin   => "01100110",
+      :to_dec   => "102"
+    )
+  end
+
+  def test_from_dec_hex
+    byte = Ohbad::Byte.from_dec(0x67)
+    assert_the_byte(byte, 
+      :to_oct   => "147",
+      :to_hex   => "67",
+      :to_ascii => "g",
+      :to_bin   => "01100111",
+      :to_dec   => "103"
     )
   end
 end
